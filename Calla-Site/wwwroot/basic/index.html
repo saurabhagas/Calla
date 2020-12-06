@@ -6,18 +6,6 @@
     <title>Kaksha</title>
     <script type="module" src="../scripts/basic.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script>
-        var currentUser;
-        $(document).ready(function(){
-            $("#myTable td").click(function() {
-                var column_num = parseInt( $(this).index() ) + 1;
-                var row_num = parseInt( $(this).parent().index() )+1;
-
-                $(this).html(currentUser);
-                //$("#result").html( "Row_num =" + row_num + "  ,  Rolumn_num ="+ column_num );
-            });
-        });
-    </script>
     <style type="text/css">
         * {
             box-sizing: border-box;
@@ -85,29 +73,12 @@
         }
 
         #space {
-            background-color: #ccc;
-            border: inset 2px;
+            border: inset 1px #ccc;
             overflow: hidden;
             background-image: url("../images/classroom-bigger.png");
-            background-size: 100%;
+            background-size: 100% 100%;
             background-repeat: no-repeat;
 	    }
-
-         .circle {
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-        }
-
-        td {
-            cursor:pointer;
-            background-image: url("../images/chair-desk.png");
-        }
-
-        #result {
-            font-weight:bold;
-            font-size:16pt;
-        }
     </style>
 </head>
 <body>
